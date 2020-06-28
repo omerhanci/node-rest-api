@@ -1,9 +1,3 @@
-const crypto = require('crypto');
-var _ = require('lodash');
-var winston = require('winston');
-
-const UNUSUAL_PAIR = 2;
-
 class RecordService {
 
     constructor(recordRepository) {
@@ -16,6 +10,5 @@ class RecordService {
 
 
 }
-
 exports.RecordService = RecordService;
 

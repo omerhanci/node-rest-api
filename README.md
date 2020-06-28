@@ -37,8 +37,8 @@ curl -X POST \
   -H 'content-type: application/json' \
   -d '{
     "startDate": "2016-11-16",
-    "endDate": "2022-02-22",
-    "minCount": 165,
+    "endDate": "2018-02-22",
+    "minCount": 125,
     "maxCount": 160
   }'
 ```
@@ -60,11 +60,10 @@ curl -X POST \
   https://omerhanci-getir.herokuapp.com/fetchByCountAndDate \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
-  -H 'postman-token: fd49ec7d-6d44-59b6-cebd-6b1ec4946b29' \
   -d '{
 "startDate": "2016-11-16",
-"endDate": "2022-02-22",
-"minCount": 165,
+"endDate": "2018-02-22",
+"minCount": 125,
 "maxCount": 160
 }'
 ```

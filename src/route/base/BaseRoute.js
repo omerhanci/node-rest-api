@@ -1,4 +1,3 @@
-var _ = require('lodash');
 class BaseRoute {
 
     constructor(req, res, next) {

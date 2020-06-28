@@ -16,7 +16,6 @@
     "express": "^4.15.3",
     "inversify": "^4.13.0",
     "inversify-vanillajs-helpers": "^2.0.0",
-    "lodash": "^4.17.10",
     "mongoose": "^5.9.20",
     "reflect-metadata": "^0.1.12",
     "underscore": "^1.9.1",

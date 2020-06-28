@@ -3,7 +3,6 @@ var http = require('http');
 const express = require('express');
 var winston = require('winston');
 var bodyParser = require('body-parser');
-var _ = require('lodash');
 require("reflect-metadata");
 var Ajv = require('ajv');
 var path = require('path');
@@ -86,7 +85,6 @@ class Server {
     }
 
     configureErrorHandler() {
-        var that = this;
         this.app.use(function (err, req, res, next) {
             var statusCode = 500;
             console.error(err);
@@ -113,7 +111,6 @@ class Server {
         register(TYPES.RecordRepository)(_RecordRepository.RecordRepository);
         register(TYPES.RecordService, [TYPES.RecordRepository])(_RecordService.RecordService);
 
-        // we must use factory methods on routes to get req,res,next
         registerFactory(TYPES.RecordRoute, (context) => {
             return (req, res, next) => {
                 let rs = context.container.get(TYPES.RecordService);
@@ -219,7 +216,7 @@ class Server {
 
         // start listening on port
         this.server.on("listening", () => {
-            winston.log("info", "Server ready. Listening on port " + this.port + ". Open up http://localhost:" + this.port + "/ in your browser.");
+            winston.log("info", "Server ready. Listening on http://localhost:" + this.port);
         });
 
     }

@@ -1,4 +1,3 @@
-const dbConn = require('./../DataAccess').dbConn;
 var Records = require('../model/records')
 
 class RecordRepository {

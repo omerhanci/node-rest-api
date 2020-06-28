@@ -10,6 +10,7 @@ class RecordRepository {
                     totalCount: { $sum: "$counts" }
                 }
             },
+            // filter for createdAt and totalCount
             {
                 $match: {
                     createdAt: {
@@ -22,6 +23,7 @@ class RecordRepository {
                     },
                 }
             },
+            // set projection
             {
                 $project: {
                     _id: 0,
@@ -33,9 +35,6 @@ class RecordRepository {
         ]).exec();
 
     }
-
-
-
 }
 
 exports.RecordRepository = RecordRepository;

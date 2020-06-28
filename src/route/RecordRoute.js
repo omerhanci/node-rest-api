@@ -24,7 +24,8 @@ class RecordRoute extends _BaseRoute.BaseRoute {
 
     fetchByCountAndDate() {
         return this._recordService.fetchByCountAndDate(this.body).catch(err => {
-            return err;
+            // it should be an internal error
+            return this.error(err, 500);
         });
     }
 }

@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+// record schema
 const recordSchema = new mongoose.Schema({
   key: String,
   value: String,

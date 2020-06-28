@@ -1,4 +1,4 @@
-var server = require('../../../src/server').server;
+var server = require('../../src/server').server;
 var chai = require('chai');
 var request = require('supertest');
 const expect = chai.expect;

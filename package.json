@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
-    "integration-test": "node_modules/mocha/bin/_mocha -u bdd --exit --timeout 999999 --colors test/integration/**/*.spec.js"
+    "integration-test": "node_modules/mocha/bin/_mocha -u bdd --exit --timeout 999999 --colors test/integration/*.spec.js"
   },
   "author": "",
   "license": "ISC",

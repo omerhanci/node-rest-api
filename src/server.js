@@ -75,7 +75,7 @@ class Server {
      */
     config() {
 
-        this.port = process.env.PORT || 9391;
+        this.port = process.env.PORT || 3000;
 
         this.app.use(bodyParser.json({ limit: '10mb' }));
         this.app.use(bodyParser.urlencoded({ extended: false }));
@@ -124,7 +124,7 @@ class Server {
 
     configureValidator() {
 
-        let ajv = Ajv({ allErrors:true });
+        let ajv = new Ajv({$data: true});
 
         // List all files in a directory in Node.js recursively in a synchronous fashion
         var walkSync = function(dir) {

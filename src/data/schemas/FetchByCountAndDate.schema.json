@@ -4,18 +4,17 @@
     "required": ["minCount", "maxCount", "startDate", "endDate"],
     "properties": {
         "minCount": {
-            "type": "integer"
+            "type": "integer",
+            "maximum": { "$data": "1/maxCount" }
         },
         "maxCount": {
             "type": "integer"
         },
         "startDate": {
-            "type": ["string"],
-            "format": "date"
-
+            "format": "date",
+            "maximum": { "$data": "1/endDate" }
         },
         "endDate": {
-            "type": ["string"],
             "format": "date"
         }
     }

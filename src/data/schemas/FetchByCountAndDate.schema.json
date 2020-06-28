@@ -1,0 +1,22 @@
+{
+    "title": "FetchByCountAndDate",
+    "type": "object",
+    "required": ["minCount", "maxCount", "startDate", "endDate"],
+    "properties": {
+        "minCount": {
+            "type": "integer"
+        },
+        "maxCount": {
+            "type": "integer"
+        },
+        "startDate": {
+            "type": ["string"],
+            "format": "date"
+
+        },
+        "endDate": {
+            "type": ["string"],
+            "format": "date"
+        }
+    }
+}

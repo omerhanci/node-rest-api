@@ -45,25 +45,3 @@ curl -X POST \
 
 All fields are required. 
 
-### Demo
-
-Live demo can be found in following url
-
-```
-  https://omerhanci-getir.herokuapp.com/fetchByCountAndDate 
-```
-
-curl request:
-
-```
-curl -X POST \
-  https://omerhanci-getir.herokuapp.com/fetchByCountAndDate \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -d '{
-"startDate": "2016-11-16",
-"endDate": "2018-02-22",
-"minCount": 125,
-"maxCount": 160
-}'
-```
